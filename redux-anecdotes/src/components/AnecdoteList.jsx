@@ -18,6 +18,7 @@ const AnecdoteList = () => {
       const vote = (id) => {
         console.log('vote', id)
         dispatch(handleVotes(id))
+
       }
 
       const sortedAnecdotes = [...anecdotes].sort(compareByVotes)
