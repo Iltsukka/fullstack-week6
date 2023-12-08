@@ -20,10 +20,12 @@ const AnecdoteList = () => {
         dispatch(handleVotes(id))
       }
 
+      const sortedAnecdotes = [...anecdotes].sort(compareByVotes)
+
       return (
         <div>
         <h2>Anecdotes</h2>
-        {anecdotes.sort(compareByVotes).map(anecdote =>
+        {sortedAnecdotes.map(anecdote =>
         <div key={anecdote.id}>
           <div>
             {anecdote.content}
