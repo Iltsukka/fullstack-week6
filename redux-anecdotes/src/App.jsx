@@ -5,7 +5,7 @@ import Filter from './components/Filter'
 import Notification from './components/Notification'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import anecdoteService from '../services/anecdotes'
+import anecdoteService from './services/anecdotes'
 import { setInitialAnecdotes } from './reducers/anecdoteReducer'
 
 const App = () => { 
