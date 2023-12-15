@@ -17,3 +17,13 @@ const notificationSlice = createSlice({
 
 export const {setNotification, disableNotification} = notificationSlice.actions
 export default notificationSlice.reducer
+
+export const showNotification = (message, timer) => {
+    return async dispatch => {
+        dispatch(setNotification(message))
+        setTimeout(() => {
+            dispatch(disableNotification())
+            
+        }, parseInt(timer.toString() + '000'));
+    }
+}
